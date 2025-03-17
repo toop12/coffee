@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>مقهى الكوفي</title>
+</head>
+<body>
+    <header style="background: url(img/pngtree-hand-drawn-cartoon-coffee-menu-background-image_125133.jpg);">
+        <h1>مقهى الكوفي</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">عن المقهى</a></li>
+                <li><a href="#menu">قائمة المشروبات</a></li>
+                <li><a href="#contact">اتصل بنا</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>عن المقهى</h2>
+        <p>مرحبًا بكم في مقهى الكوفي، المكان المثالي لاسترخاء والاستمتاع بأفضل المشروبات الساخنة.</p>
+        <img src="img/_تنزيل.jpeg" alt="صورة المقهى" class="cafe-image">
+    </section>
+
+    <section id="menu">
+        <h2>قائمة المشروبات</h2>
+        <div class="menu-items">
+            <div class="menu-item">
+                <img src="img/d.jpeg" alt="إسبريسو">
+                <p>إسبريسو</p>
+            </div>
+            <div class="menu-item">
+                <img src="img/g.jpeg" alt="لاتيه">
+                <p>لاتيه</p>
+            </div>
+            <div class="menu-item">
+                <img src="img/h.jpeg" alt="كابتشينو">
+                <p>كابتشينو</p>
+            </div>
+            <div class="menu-item">
+                <img src="img/y.jpeg" alt="موكا">
+                <p>موكا</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>اتصل بنا</h2>
+        <form id="contactForm">
+            <label for="name">الاسم:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">البريد الإلكتروني:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">الرسالة:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">إرسال</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 مقهى الكوفي. جميع الحقوق محفوظة.</p>
+    </footer>
+
+    <script src="script.js">
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    if (name && email && message) {
+        alert('شكرًا لتواصلك معنا، ' + name + '! سنرد عليك قريبًا.');
+        document.getElementById('contactForm').reset();
+    } else {
+        alert('يرجى ملء جميع الحقول.');
+    }
+});
+    </script>
+</body>
+</html>
